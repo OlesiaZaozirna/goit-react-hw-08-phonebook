@@ -1,12 +1,13 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import Navbar from "../Navbar/Navbar"
+
+import Navigation from "components/Navigation/Navigation";
 
 const SharedLayout = () => {
   return (
     <>
-      <Navbar />
+      <Navigation/>
       <Suspense fallback={<p>Loading page...</p>}>
         <Outlet />
       </Suspense>
