@@ -1,15 +1,14 @@
 import { useState,  useId } from "react";
 
  
-import css from "./RegistrForm.module.css"
+import css from "./LoginForm.module.css"
 
 const INITIAL_STATE = {
-    name: "",
     email: "",
     password: "",
 };
 
-const RegistrForm = ({onSubmit}) => {
+const LoginForm = ({onSubmit}) => {
     const [state, setState] = useState({ ...INITIAL_STATE });
 
     const handleChange = ({ target }) => {
@@ -32,17 +31,13 @@ const RegistrForm = ({onSubmit}) => {
         setState({ ...INITIAL_STATE });
     }
 
-    const nameId = useId();
+   
     const emailId = useId();
     const passwordId = useId();
-    const { name, email, password } = state;
+    const { email, password } = state;
     
     return (
         <form className={css.form} onSubmit={handleSubmit}>
-            <div className={css.container}>
-                <label htmlFor={nameId}>Name:</label>
-                <input value={name} onChange={handleChange} id={nameId}  name="name" required/>
-            </div>
             <div  className={css.container}>
                 <label htmlFor={emailId}>Email:</label>
                 <input value={email} onChange={handleChange} id={emailId} type="email" name="email"  required/>
@@ -51,8 +46,8 @@ const RegistrForm = ({onSubmit}) => {
                 <label htmlFor={passwordId}>Password:</label>
                 <input value={password} onChange={handleChange}  id={passwordId} type="password" name="password" required />
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Login</button>
         </form>
     )
 }
-export default RegistrForm
+export default LoginForm
