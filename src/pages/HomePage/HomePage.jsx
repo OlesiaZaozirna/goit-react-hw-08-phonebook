@@ -3,7 +3,7 @@ import css from "./HomePage.module.css"
 const HomePage = () => {
     return (
         <div>
-            <h3>Home</h3>
+            <h1>Welcome to the Phonebook !</h1>
         </div>
     )
 }

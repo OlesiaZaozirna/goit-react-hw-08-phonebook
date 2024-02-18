@@ -1,25 +1,40 @@
 import { Routes, Route } from "react-router-dom";
-import { lazy } from "react";
+import { lazy} from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { current } from "../redux/auth/auth-operations";
 
 import css from "./App.module.css";
 
 import SharedLayout from "./SharedLayout/SharedLayout";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import PublicRoute from "./PublicRoute/PublicRoute";
 
 const NotFoundPage = lazy(() => import('pages/NotFoundPage/NotFoundPage'))
 const HomePage = lazy(() => import('pages/HomePage/HomePage'))
 const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'))
 const RegistrPage = lazy(()=> import('pages/RegistPage/RegistrPage'))
-const ContactList = lazy(()=> import('./ContactList/ContactList'))
+const ContactsPage = lazy(()=> import('pages/ContactsPage/ContactsPage'))
 
 const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(current())
+  },[dispatch]);
+
   return (
     <div className={css.container}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/register" element={<RegistrPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/contacts" element={<ContactList />} />
+          <Route elementt={<PublicRoute />}>
+              <Route path="register" element={<RegistrPage />} />
+              <Route path="login" element={<LoginPage />} />
+          </Route>
+               <Route elementt={<PrivateRoute />}>
+               <Route path="/contacts" element={<ContactsPage />} />
+          </Route>          
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
@@ -29,7 +44,7 @@ const App = () => {
 }
 export default App
 
-{/*import { Filter } from './Filter/Filter';
+/*import { Filter } from './Filter/Filter';
 import React, { useEffect } from 'react';
 import ContactList from './ContactList/ContactList';
 import ContactForm from './ContactForm/ContactForm';
@@ -58,4 +73,4 @@ const App = () => {
   );
 }
 
-export default App;*/}
+export default App;*/
