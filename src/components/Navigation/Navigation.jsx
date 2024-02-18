@@ -9,12 +9,15 @@ import NavbarUser from './NavbarUser/NavbarUser';
 import { selectIsLogin } from '../../redux/auth/auth-selectors';
 import css from "./Navigation.module.css"
 
+
 const Navigation = () => {
   const isLogin = useSelector(selectIsLogin);
 
   return (
     <nav className={css.navbar}>
-      <Link to="/">Logo</Link>
+      <Link to="/" className={css.logo}>
+        Your Phonebook
+      </Link>
       <NavbarMenu />
       {isLogin ? <NavbarUser /> : <NavbarAuth />}
       

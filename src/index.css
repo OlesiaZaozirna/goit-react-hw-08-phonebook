@@ -20,6 +20,11 @@ body {
   );
   height: 100%;
   margin: 0;
+
+  background-image: url(./images/back_fon.jpg);
+  background-size: cover; /* Растягивает изображение по размеру блока */
+  background-repeat: no-repeat; /* Запрещает повторение изображения */
+  background-position: center;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
