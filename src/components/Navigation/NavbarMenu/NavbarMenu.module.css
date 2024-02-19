@@ -7,15 +7,15 @@
 .link {
   padding: 10px 15px;
   text-decoration: none;
-  color: rgb(88, 61, 7);
+  color: #b04330;
   font-size: 24px;
   font-weight: bold;
 }
 
 .link:global(.active) {
-  color: rgb(88, 61, 7);
+  color: #ae1f1a;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .link:hover {
-  color: rgb(220, 152, 16);
+  color: #ffd977;
 }

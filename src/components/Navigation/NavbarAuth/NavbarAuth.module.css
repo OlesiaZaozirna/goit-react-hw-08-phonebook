@@ -8,16 +8,16 @@
 .link {
   text-decoration: none;
   font-size: 24px;
-  color: rgb(88, 61, 7);
+  color: #b04330;
   font-weight: bold;
 }
 
 .link:global(.active) {
-  color: rgb(88, 61, 7);
-  text-shadow: 2px 2px 4px rgba(133, 86, 5, 0.5);
+  color: #ae1f1a;
+  border-bottom: 1px solid;
 }
 
 .link:hover {
-  color: rgb(220, 152, 16);
+  color: #ffd977;
   border-bottom: 1px solid;
 }
