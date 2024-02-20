@@ -21,7 +21,7 @@ const LoginPage = () => {
 
     return (
         <div>
-            <h1>Login page</h1>
+            <h1></h1>
             {authLoading && <p>...login in progress</p>}
             <LoginForm onSubmit={handleLogin } />
             {authError && <p style={{color: "red"}}>{authError}</p>}

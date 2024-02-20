@@ -38,7 +38,9 @@ const LoginForm = ({onSubmit}) => {
     
     return (
         <form className={css.form} onSubmit={handleSubmit}>
-            <div  className={css.container}>
+            <h2 className={css.title}>Login</h2>
+            <div className={css.container}>
+                
                 <label htmlFor={emailId}>Email:</label>
                 <input value={email} onChange={handleChange} id={emailId} type="email" name="email"  required/>
             </div>

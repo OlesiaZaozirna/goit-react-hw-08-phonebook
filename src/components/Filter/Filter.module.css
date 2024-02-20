@@ -1,26 +1,53 @@
 .FilterContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
-.Input {
-  padding: 10px;
-  margin: 5px 0 #fff;
-  border: 1px solid;
-  min-width: 200px;
-  min-height: 15px;
+.Filter-label {
+  display: block;
+  width: 120px;
+  font-weight: 500;
+  font-size: 16px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.Filter {
+  width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.Filter input {
+  width: calc(100% - 16px);
+  padding: 6px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.Input:hover,
-.Input:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+.Filter input:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.Filter input::placeholder {
+  color: #fff;
 }

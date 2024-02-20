@@ -39,7 +39,9 @@ const RegistrForm = ({onSubmit}) => {
     
     return (
         <form className={css.form} onSubmit={handleSubmit}>
-            <div className={css.container}>
+            <h2 className={css.title}>Please Sign up</h2>
+            <div className={css.container_form}>
+                <div className={css.container}>
                 <label htmlFor={nameId}>Name:</label>
                 <input value={name} onChange={handleChange} id={nameId}  name="name" required/>
             </div>
@@ -50,8 +52,9 @@ const RegistrForm = ({onSubmit}) => {
             <div className={css.container}>
                 <label htmlFor={passwordId}>Password:</label>
                 <input value={password} onChange={handleChange}  id={passwordId} type="password" name="password" required />
-            </div>
-            <button type="submit">Register</button>
+                </div>
+                </div>
+            <button type="submit" className={css.button}>Register</button>
         </form>
     )
 }

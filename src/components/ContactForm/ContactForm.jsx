@@ -54,36 +54,38 @@ const ContactForm = () => {
     /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/.test(number);
 
       return (
-      <div >
-        <form className={css.FormContainer} onSubmit={handleSubmit}>
-          <label htmlFor="name">Name</label>
-          <input className={css.Input}
-            type="text"
-            placeholder="Contact name"
-            name="name"
-            id="name"
-            required
-            value={formData.name}
-            onChange={handleChange}
-          />
+        <div>
+          <form className={css.form} onSubmit={handleSubmit}>
+        <h2 className={css.title}>Phonebook</h2>
+            <label className={css.label} htmlFor="name">Name</label>
+        <input
+          className={css.input}
+          type="text"
+          placeholder="Contact name"
+          name="name"
+          id="name"
+          required
+          value={formData.name}
+          onChange={handleChange}
+        />
 
-          <label htmlFor="number">Number</label>
-          <input className={css.Input}
-            type="tel"
-            placeholder="Phone number"
-            name="number"
-            id="number"
-            required
-            value={formData.number}
-            onChange={handleChange}
-          />
+        <label className={css.label} htmlFor="number">Number</label>
+        <input
+          className={css.input}
+          type="tel"
+          placeholder="Phone number"
+          name="number"
+          id="number"
+          required
+          value={formData.number}
+          onChange={handleChange}
+        />
 
-          <button className={css.SubmitButton} type="submit">Add contact</button>
-        </form>
-      </div>
-    );
-  }
-
+        <button className={css.button} type="submit">Add contact</button>
+      </form>
+    </div>
+  );
+}
 
 
 export default ContactForm;

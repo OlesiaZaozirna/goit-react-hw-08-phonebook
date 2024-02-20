@@ -2,20 +2,26 @@
   list-style: none;
   display: flex;
   justify-content: center;
-}
-
-.link {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #b04330;
-  font-size: 24px;
-  font-weight: bold;
+  gap: 20px;
 }
 
 .link:global(.active) {
-  color: #ae1f1a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #8bfdfe;
+  border-bottom: 2px solid;
 }
+
+.link {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  text-shadow: 0 0 0.5vw #1041ff, 0 0 1.5vw #1041ff, 0 0 5vw #1041ff,
+    0 0 5vw #1041ff, 0 0 0.2vw #8bfdfe, 0.3vw 0.3vw 0.05vw #147280;
+  color: #28d7fe;
+}
+
 .link:hover {
-  color: #ffd977;
+  color: #fff;
+  text-shadow: 0 0 0.5vw #1041ff, 0 0 1.5vw #1041ff, 0 0 5vw #1041ff,
+    0 0 5vw #1041ff, 0 0 0.2vw #8bfdfe, 0.3vw 0.3vw 0.05vw #147280;
 }

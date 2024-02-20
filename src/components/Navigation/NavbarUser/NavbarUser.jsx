@@ -13,7 +13,7 @@ const NavbarUser = () => {
 
     return (
         <div className={css.container}>
-            {name}
+            <span className={css.name}>{name}</span>
             <button onClick={onLogout}  className={css.logoutButton}>Logout</button>
         </div>
     )

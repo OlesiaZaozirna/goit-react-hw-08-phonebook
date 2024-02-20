@@ -5,19 +5,24 @@
   margin-right: 20px;
 }
 
-.link {
-  text-decoration: none;
-  font-size: 24px;
-  color: #b04330;
-  font-weight: bold;
+.link:global(.active) {
+  color: #0a0075;
+  border-bottom: 2px solid;
 }
 
-.link:global(.active) {
-  color: #ae1f1a;
-  border-bottom: 1px solid;
+.link {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  text-shadow: 0 0 0.5vw #1041ff, 0 0 1.5vw #1041ff, 0 0 5vw #1041ff,
+    0 0 5vw #1041ff, 0 0 0.2vw #8bfdfe, 0.3vw 0.3vw 0.05vw #147280;
+  color: #28d7fe;
 }
 
 .link:hover {
-  color: #ffd977;
-  border-bottom: 1px solid;
+  color: #fff;
+  text-shadow: 0 0 0.5vw #1041ff, 0 0 1.5vw #1041ff, 0 0 5vw #1041ff,
+    0 0 5vw #1041ff, 0 0 0.2vw #8bfdfe, 0.3vw 0.3vw 0.05vw #147280;
+  border-bottom: 2px solid;
 }
