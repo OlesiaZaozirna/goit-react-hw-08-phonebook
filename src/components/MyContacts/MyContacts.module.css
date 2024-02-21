@@ -1,15 +1,7 @@
 .MyContactsContainer {
   display: flex;
-  justify-content: center; /* центрирование по горизонтали */
-}
-
-.FormContainer,
-.ContactListContainer {
-  margin: 0 10px; /* отступы между контейнерами */
-}
-
-@media (min-width: 768px) {
-  .MyContactsContainer {
-    flex-direction: row; /* контейнеры располагаются в ряд */
-  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }

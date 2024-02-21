@@ -1,18 +1,16 @@
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { Filter } from "../../components/Filter/Filter";
 import ContactList from "../../components/ContactList/ContactList";
-import styles from "./MyContacts.module.css";
+import css from "./MyContacts.module.css";
 
 
 export const MyContacts = () => {
     return (
-      <div className="MyContactsContainer">
-        <div className="FormContainer">
-          <h1>Phonebook</h1>
+      <div className={css.MyContactsContainer}>
+        <div className={css.FormContainer}>
           <ContactForm />
         </div>
-        <div className="ContactListContainer">
-          <h2>Contacts</h2>
+        <div className={css.ContactListContainer}>
           <Filter name="filter"/>
           <ContactList/>
         </div>

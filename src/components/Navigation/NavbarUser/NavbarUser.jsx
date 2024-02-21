@@ -6,6 +6,7 @@ import { logout } from "../../../redux/auth/auth-operations"
 
 const NavbarUser = () => {
     const { name } = useSelector(selectUser);
+   
     
     const dispatch = useDispatch()
 

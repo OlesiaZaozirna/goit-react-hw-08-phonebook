@@ -26,7 +26,7 @@ export const Filter = () => {
   const validateName = name => /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/.test(name);
 
   return (
-    <div className={css.FilterContainer}>
+    <div className={css.Filter}>
       <label htmlFor="filter">Find contact by name</label>
       <input className={css.Input}
         type="text"

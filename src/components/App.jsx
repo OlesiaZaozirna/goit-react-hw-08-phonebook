@@ -26,16 +26,16 @@ const App = () => {
   return (
     <div className={css.container}>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
-          <Route index element={<HomePage />} />
-          <Route elementt={<PublicRoute />}>
-              <Route path="register" element={<RegistrPage />} />
-              <Route path="login" element={<LoginPage />} />
-          </Route>
-               <Route elementt={<PrivateRoute />}>
-               <Route path="/contacts" element={<ContactsPage />} />
-          </Route>          
-          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/" element={<SharedLayout />}>
+             <Route index element={<HomePage />} />
+              <Route elementt={<PublicRoute />}>
+                    <Route path="register" element={<RegistrPage />} />
+                    <Route path="login" element={<LoginPage />} />
+             </Route>
+             <Route elementt={<PrivateRoute />}>
+                    <Route path="/contacts" element={<ContactsPage />} />
+             </Route>          
+             <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
 

@@ -14,7 +14,7 @@ const Navigation = () => {
   const isLogin = useSelector(selectIsLogin);
 
   return (
-    <nav className={css.navbar}>
+    <div className={css.navbar}>
       <Link to="/" className={css.logo}>
         <MdPermPhoneMsg  className={css.logo_icon} />
         Your Phonebook
@@ -22,7 +22,7 @@ const Navigation = () => {
       <NavbarMenu />
       {isLogin ? <NavbarUser /> : <NavbarAuth />}
       
-    </nav>
+    </div>
   );
 };
 

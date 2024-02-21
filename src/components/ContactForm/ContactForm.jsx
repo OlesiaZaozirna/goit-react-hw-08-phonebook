@@ -54,7 +54,7 @@ const ContactForm = () => {
     /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/.test(number);
 
       return (
-        <div>
+        <div className={css.container}>
           <form className={css.form} onSubmit={handleSubmit}>
         <h2 className={css.title}>Phonebook</h2>
             <label className={css.label} htmlFor="name">Name</label>
