@@ -10,7 +10,7 @@ const PublicRoute = () => {
      if (!isLogin && token) {
         return <p>...Loading</p>
     }
-    if (!isLogin) {
+    if (isLogin) {
         return <Navigate to="/contacts" />
     }
 

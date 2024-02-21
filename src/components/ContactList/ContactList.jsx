@@ -14,12 +14,12 @@ const ContactList = () => {
 
   return (
     <ul className={css.ContactListContainer}>
-      {contacts.map(({ _id, name, phone }) => (
-        <li className={css.ContactListItem} key={_id}>
+      {contacts.map(({ id, name, number }) => (
+        <li className={css.ContactListItem} key={id}>
           <p className={css.Description}>
-            {name}: {phone}
+            {name}: {number}
           </p>
-          <button className={css.Delete} onClick={() => dispatch(deleteContact(_id))}>Delete</button>
+          <button className={css.Delete} onClick={() => dispatch(deleteContact(id))}>Delete</button>
         </li>
       ))}
     </ul>

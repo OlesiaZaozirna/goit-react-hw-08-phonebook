@@ -28,11 +28,11 @@ const App = () => {
       <Routes>
           <Route path="/" element={<SharedLayout />}>
              <Route index element={<HomePage />} />
-              <Route elementt={<PublicRoute />}>
+              <Route element={<PublicRoute />}>
                     <Route path="register" element={<RegistrPage />} />
                     <Route path="login" element={<LoginPage />} />
              </Route>
-             <Route elementt={<PrivateRoute />}>
+             <Route element={<PrivateRoute />}>
                     <Route path="/contacts" element={<ContactsPage />} />
              </Route>          
              <Route path="*" element={<NotFoundPage />} />
