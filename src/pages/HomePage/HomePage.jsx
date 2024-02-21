@@ -1,5 +1,5 @@
 import css from "./HomePage.module.css"
-import { useEffect, useState } from 'react';
+
 
 const HomePage = () => {
     return (
