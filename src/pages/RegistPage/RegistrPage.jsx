@@ -18,7 +18,7 @@ const RegistrPage = () => {
 
     return (
         <main>
-            <h1></h1>
+            
             {authLoading && <p>...Registration in progress</p>}
             <RegistrForm onSubmit={handleSignup} />
             {authError && <p style={{color: "red"}}>{authError}</p>}
